@@ -2,7 +2,7 @@
 
 ################################
 
-### Credentials - Mongo
+### Credentials - Mongo Express
 
 url: http://localhost:8081/
 
