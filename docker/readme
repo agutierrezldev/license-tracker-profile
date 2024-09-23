@@ -1,0 +1,4 @@
+### Docker
+
+1. docker compose up or docker compose up -d
+2. docker compose -p license-tracker up -d
