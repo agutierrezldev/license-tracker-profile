@@ -5,4 +5,4 @@ server:
 spring:
   data:
     mongodb:
-      uri: mongodb:/agutierrezl:agutierrezl@localhost:27017/document-service-db?authSource=admin
+      uri: mongodb://agutierrezl:agutierrezl@localhost:27017/document-service-db?authSource=admin
