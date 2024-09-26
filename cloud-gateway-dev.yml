@@ -6,16 +6,16 @@ spring:
   cloud:
     gateway:
       routes:
-      
+
         - id: document-service-route
-          uri: lb://document-service #http://service-1.com , http://service-2.com
+          uri: lb://document-service #http://service-1.com, http://service-2.com
           predicates:
             - Path=/api/document-service/**
           filters:
             - StripPrefix=2
 
         - id: user-service-route
-          uri: lb://user-service #http://service-1.com , http://service-2.com
+          uri: lb://user-service
           predicates:
             - Path=/api/user-service/**
           filters:
