@@ -13,6 +13,7 @@ spring:
             - Path=/api/document-service/**
           filters:
             - StripPrefix=2
+            - AddRequestParameter=true
 
         - id: user-service-route
           uri: lb://user-service
