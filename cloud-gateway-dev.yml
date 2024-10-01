@@ -21,3 +21,11 @@ spring:
             - Path=/api/user-service/**
           filters:
             - StripPrefix=2
+
+        - id: customer-service-route
+          uri: lb://customer-service #http://service-1.com, http://service-2.com
+          predicates:
+            - Path=/api/customer-service/**
+          filters:
+            - StripPrefix=2
+            - AddRequestParameter=paramName, paramValue
