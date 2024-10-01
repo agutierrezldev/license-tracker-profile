@@ -1,0 +1,8 @@
+server:
+  port: 9021
+
+# Mongo Configuration
+spring:
+  data:
+    mongodb:
+      uri: mongodb://agutierrezl:agutierrezl@localhost:27017/license-tracker-db?authSource=admin
