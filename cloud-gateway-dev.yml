@@ -21,3 +21,15 @@ spring:
             - Path=/api/user-service/**
           filters:
             - StripPrefix=2
+      
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:3000"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: "*"
+            allowCredentials: true
