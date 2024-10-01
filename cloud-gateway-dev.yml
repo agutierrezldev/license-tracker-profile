@@ -1,24 +1,14 @@
 server:
   port: ${CUSTOM.SERVER.PORT:9080}
 
+# Spring Cloud Gateway Router
 spring:
   cloud:
     gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "http://localhost:3000"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-            allowedHeaders: "*"
-            allowCredentials: true
-
       routes:
+
         - id: document-service-route
-          uri: lb://document-service
+          uri: lb://document-service #http://service-1.com, http://service-2.com
           predicates:
             - Path=/api/document-service/**
           filters:
