@@ -29,3 +29,11 @@ spring:
           filters:
             - StripPrefix=2
             - AddRequestParameter=paramName, paramValue
+
+        - id: license-service-route
+          uri: lb://license-service #http://service-1.com, http://service-2.com
+          predicates:
+            - Path=/api/license-service/**
+          filters:
+            - StripPrefix=2
+            - AddRequestParameter=paramName, paramValue
