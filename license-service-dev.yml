@@ -6,3 +6,13 @@ spring:
   data:
     mongodb:
       uri: mongodb://agutierrezl:agutierrezl@localhost:27017/license-tracker-db?authSource=admin
+
+
+# openAPI - Swagger
+springdoc:
+  api-docs:
+    path: /api-docs
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui/index.html
+    enabled: true
